@@ -1,0 +1,110 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1604689598793-b8bf1dc445a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(60, 179, 113, 0.9);
+    width: 600px;
+    height: 725px;
+    color: #fff;
+    font-family: 'Kelly Slab', cursive;
+    border-radius: 20px;
+    border: 2px solid #2E8B57;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kelly Slab', cursive;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Kelly Slab', cursive;
+    align-self: center;
+}
+
+input {
+    font-family: 'Kelly Slab', cursive;
+    padding: 5px; 
+}
+
+#calculated {
+    font-family: 'Kelly Slab', cursive;
+    color: #006400;
+    background-color: #fff;
+    border: 2px solid #2E8B57;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#btn {
+    font-family: 'Kelly Slab', cursive;
+    color: #fff;
+    background-color: #2E8B57;
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+#rate {
+    display: none;
+}
+
+#totalSalary {
+    display: flex;
+}
+
+#ndfl, #pension, #insurance, #total {
+    background-color: rgba(220, 220, 220, 0.9);
+    color: #696969;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #2E8B57;
+    border-radius: 20px;
+    width: 100px;
+    height: 100%;
+}
+
+span {
+    font-weight: 900;
+    color: #006400;
+}
+
+
+@media all and (max-width:800px) {
+        #container {
+            flex-wrap: wrap;
+            width: 450px;
+            height: 725px;
+        }
+
+        h1 {
+            font-size: 25px;
+            align-self: flex-start;
+        }
+
+    #ndfl, #pension, #insurance, #total {
+        width: 65px;
+        height: 70%;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    span {
+        font-size: 15px;
+    }
+}

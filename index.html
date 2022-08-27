@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор зарплаты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <form>
+            <h1>Калькулятор зарплаты и взносов</h1>
+
+            <p>Оплата в час</p>
+            <span>$<input type="text" id="salary" placeholder="Оплата в час"></span>
+
+            <p>Количество часов в день</p>
+            <span>🕑<input type="text" id="hour" placeholder="Кол-во часов в день"></span> 
+
+            <p>Количество рабочих дней</p>
+            <span>☀<input type="text" id="days" placeholder="Кол-во рабочих дней"></span>
+<br>
+<!-- 1 кнопка -->
+            <button id="btn">Ставка НДФЛ</button>
+            <select id="rate">
+                <option disabled>выберите ставку</option>
+                <option value="0.13" selected>13% при доходе меньше 5млн.р./год</option>
+                <option value="0.15">15% при доходе от 5млн.р./год</option>
+            </select>
+
+<!-- 2 кнопка -->
+            <button id="calculated">Расчитать</button>
+
+
+            <!-- BLOCKS -->
+
+        <div id="totalSalary">
+<!-- 1 -->
+            <div id="ndfl">
+                <p>НДФЛ</p>
+                <span>$</span>
+                <span id="countNdfl"></span>
+                <p>в месяц</p>
+            </div>
+<!-- 2 -->
+            <div id="pension">
+                <p>Взнос в ПФ(22%)</p>
+                <span>$</span>
+                <span id="countPension"></span>
+                <p>в месяц</p>
+            </div>
+<!-- 3 -->
+            <div id="insurance">
+                <p>Cтраховка (5,1%)</p>
+                <span>$</span>
+                <span id="countInsurance"></span>
+                <p>в месяц</p>
+            </div>
+
+            <div id="total">
+                <p>Итоговая сумма</p>
+                <span>$</span>
+                <span id="countTotal"></span>
+                <p>в месяц</p>
+            </div>
+
+        </div>
+
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
